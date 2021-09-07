@@ -48,6 +48,7 @@ function serve() {
 		server: './dist'
 	})
 	watch('src/**.html', series(html)).on('change', sync.reload)
+	watch('src/html/**.html', series(html)).on('change', sync.reload)
 	watch('src/scss/**.scss', series(scss)).on('change', sync.reload)
 	watch('src/scss/**.scss', series(scss)).on('change', sync.reload)
 }
