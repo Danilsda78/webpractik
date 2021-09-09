@@ -25,6 +25,35 @@ function bodyPositionScroll() {
 }
 
 
+let dataIdIntput = document.querySelectorAll('.pick__cards')
+
+dataIdIntput.forEach(element => {
+	// console.log('---------');
+	let label = element.querySelectorAll('label')
+	element = element.querySelectorAll('input[data-id]')
+
+	element.forEach(element => {
+		let input = element
+		let dataId = element.attributes['data-id'].value
+		input.setAttribute('checked', true)
+		// console.log(input);
+
+		label.forEach(element => {
+			// console.log(element.attributes['for'].value);
+			element = element.attributes['for'].value
+			if (element = dataId) {
+				input.setAttribute('checked', true)
+			}
+
+
+		})
+	})
+});
+
+
+
+
+
 mobBtn.addEventListener('click', headBtnActive)
 window.addEventListener('scroll', bodyPositionScroll)
 

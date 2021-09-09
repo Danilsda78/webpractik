@@ -2,7 +2,7 @@
 	&__slid {
 		margin-right: 32px;
 		visibility: hidden;
-		transition: .5s;
+		transition: visibility .5s;
 		&.slick-active {
 			visibility: visible;
 		}

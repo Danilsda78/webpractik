@@ -53,6 +53,21 @@ img {
 .i-pizza {
 	@include svg(pizza-box)
 }
+.i-all {
+	@include svg(all)
+}
+.i-sharp {
+	@include svg(sharp)
+}
+.i-meat {
+	@include svg(meat)
+}
+.i-cheese {
+	@include svg(cheese)
+}
+.i-vegan {
+	@include svg(vegan)
+}
 
 .container {
 	max-width: 1320px + 62px;
@@ -63,10 +78,14 @@ img {
 		padding: 0 16px;
 	}
 }
+.box {
+	margin: 0 0 100px;
+}
 .btn {
 	width: 100%;
 	height: auto;
 	background: #E52D2D;
+	color: #fff;
 	border-radius: 5px;
 	padding: 16px 50px;
 }

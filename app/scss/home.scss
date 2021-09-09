@@ -1,5 +1,6 @@
 .home {
 	margin: 176px 0 0;
+	margin-bottom: 112px;
 	&__wrap {
 		display: flex;
 		overflow: hidden;
@@ -65,6 +66,7 @@
 @media (max-width: 990px) {
 	.home {
 		margin: 130px 0 0;
+		margin-bottom: 80px;
 		&__wrap {
 			margin: 0 0 5px;
 		}
@@ -73,6 +75,8 @@
 @media (max-width: 768px) {
 	.home {
 		margin: 72px 0 0;
+		margin-bottom: 60px;
+
 		&__wrap {
 			flex-direction: column;
 			margin: 0 0 20px;
