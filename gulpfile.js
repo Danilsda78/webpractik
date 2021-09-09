@@ -56,6 +56,7 @@ function serve() {
 	watch('app/html/**.html', series(html)).on('change', sync.reload)
 	watch('app/scss/**.scss', series(scss)).on('change', sync.reload)
 	watch('app/js/**.js', series(jsmin)).on('change', sync.reload)
+	watch('app/assts/*', series(img)).on('change', sync.reload)
 }
 
 exports.build = series(clear, scss, html, jsmin, img)

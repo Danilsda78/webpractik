@@ -28,6 +28,9 @@ a {
 		color: #E52D2D;
 	}
 }
+button {
+	cursor: pointer;
+}
 ul, li, button {
 	border: none;
 	margin: 0;
@@ -35,6 +38,10 @@ ul, li, button {
 	list-style: none;
 	background: none;
 	color: inherit;
+}
+img {
+	width: 100%;
+	height: auto;
 }
 
 .i-logo {
@@ -48,11 +55,18 @@ ul, li, button {
 }
 
 .container {
-	max-width: 1320px + 31px;
+	max-width: 1320px + 62px;
 	margin: 0 auto;
 	padding: 0 31px;
 	@media (max-width: 990px) {
-		max-width: 1320px + 16px;
+		max-width: 1320px + 32px;
 		padding: 0 16px;
 	}
+}
+.btn {
+	width: 100%;
+	height: auto;
+	background: #E52D2D;
+	border-radius: 5px;
+	padding: 16px 50px;
 }

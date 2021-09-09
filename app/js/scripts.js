@@ -27,3 +27,4 @@ function bodyPositionScroll() {
 
 mobBtn.addEventListener('click', headBtnActive)
 window.addEventListener('scroll', bodyPositionScroll)
+
