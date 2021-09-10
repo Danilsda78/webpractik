@@ -89,6 +89,9 @@ img {
 }
 .box {
 	margin: 0 0 100px;
+	&:last-child {
+		margin: 0;
+	}
 }
 .btn {
 	width: 100%;
