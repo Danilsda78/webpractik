@@ -68,6 +68,15 @@ img {
 .i-vegan {
 	@include svg(vegan)
 }
+.i-order {
+	@include svg(order)
+}
+.i-car {
+	@include svg(car)
+}
+.i-pay {
+	@include svg(pay)
+}
 
 .container {
 	max-width: 1320px + 62px;

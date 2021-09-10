@@ -24,9 +24,8 @@ function bodyPositionScroll() {
 	lastPositionScroll = i
 }
 
-
+// pick didn`t
 let dataIdIntput = document.querySelectorAll('.pick__cards')
-
 dataIdIntput.forEach(element => {
 	// console.log('---------');
 	let label = element.querySelectorAll('label')
@@ -49,7 +48,7 @@ dataIdIntput.forEach(element => {
 		})
 	})
 });
-
+// finish
 
 
 
