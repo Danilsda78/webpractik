@@ -7,6 +7,7 @@ let lastPositionScroll = 0
 function headBtnActive() {
 	mobMenu.classList.toggle('active')
 	mobBtn.classList.toggle('active')
+	document.body.classList.toggle('hidden')
 }
 
 function bodyPositionScroll() {

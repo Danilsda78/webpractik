@@ -78,6 +78,9 @@ img {
 	@include svg(pay)
 }
 
+.hidden {
+	overflow: hidden;
+}
 .container {
 	max-width: 1320px + 62px;
 	margin: 0 auto;
@@ -89,9 +92,9 @@ img {
 }
 .box {
 	margin: 0 0 100px;
-	&:last-child {
-		margin: 0;
-	}
+}
+footer {
+	margin: -100px 0 0;
 }
 .btn {
 	width: 100%;

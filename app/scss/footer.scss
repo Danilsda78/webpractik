@@ -1,0 +1,42 @@
+.footer {
+	background: #000;
+	color: #fff;
+	padding: 32px 0;
+	&__content {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+	}
+	span {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 18px;		
+	}
+	&__tel {
+		font-weight: 800;
+		font-size: 24px;
+		line-height: 30px;
+		margin: 0 0 3px;
+	}
+	&__link {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 18px;		
+	}
+	@media (max-width: 768px) {
+		&__content {
+			flex-direction: column;
+		}
+		span {
+			margin: 0 0 10px;
+		}
+	}
+}
