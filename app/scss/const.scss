@@ -103,4 +103,20 @@ footer {
 	color: #fff;
 	border-radius: 5px;
 	padding: 16px 50px;
+	transition: .2s;
+	border: 3px solid rgba($color: #8FC9FF, $alpha: 0);	
+	&:hover {
+		background: #FF3C3C;
+	}
+	&:active {
+		background: #BF221E;		
+	}
+	&:focus {
+		background: #E52D2D;
+		border: 3px solid #8FC9FF;	
+	}
+	&:disabled {
+		background: #DBDBDB;
+		color: #939393;
+	}
 }

@@ -25,35 +25,35 @@ function bodyPositionScroll() {
 	lastPositionScroll = i
 }
 
-// pick didn`t
-let dataIdIntput = document.querySelectorAll('.pick__cards')
-dataIdIntput.forEach(element => {
-	// console.log('---------');
-	let label = element.querySelectorAll('label')
-	element = element.querySelectorAll('input[data-id]')
-
-	element.forEach(element => {
-		let input = element
-		let dataId = element.attributes['data-id'].value
-		input.setAttribute('checked', true)
-		// console.log(input);
-
-		label.forEach(element => {
-			// console.log(element.attributes['for'].value);
-			element = element.attributes['for'].value
-			if (element = dataId) {
-				input.setAttribute('checked', true)
-			}
-
-
-		})
-	})
-});
-// finish
-
-
-
-
 mobBtn.addEventListener('click', headBtnActive)
 window.addEventListener('scroll', bodyPositionScroll)
+
+
+let cards = document.querySelectorAll('.pick__cards')
+
+cards.forEach(card => {
+	let inputs = card.querySelectorAll('input')
+	let labels = card.querySelectorAll('label')
+	let inputName = card.querySelector('input').attributes.name.value
+
+	inputs.forEach((intput, i) => {
+		i += 1
+		intput.setAttribute('id', inputName + i)
+		labels[i - 1].setAttribute('for', inputName + i)
+	});
+});
+
+let popap = document.querySelector('#popap')
+let popapOn = document.querySelector('.header__item.drop')
+let popapOff = document.querySelector('#popap .popap__btn')
+
+popapOn.addEventListener('click', el => {
+	popap.classList.toggle('active')
+	document.body.classList.toggle('hidden')
+})
+popapOff.addEventListener('click', el => {
+	popap.classList.toggle('active')
+	document.body.classList.toggle('hidden')
+})
+
 
