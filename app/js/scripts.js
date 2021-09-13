@@ -48,12 +48,12 @@ cards.forEach(card => {
 mobBtn.addEventListener('click', headBtnActive)
 window.addEventListener('scroll', bodyPositionScroll)
 popapOn.addEventListener('click', el => {
-	scroll = true
+	scroll = false
 	popap.classList.toggle('active')
 	app.classList.toggle('hidden')
 })
 popapOff.addEventListener('click', el => {
-	scroll = false
+	scroll = true
 	popap.classList.toggle('active')
 	app.classList.toggle('hidden')
 })
