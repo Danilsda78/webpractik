@@ -10,15 +10,19 @@
 	background: rgba($color: #000000, $alpha: .8);
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity .4s;
+	transition: opacity .3s;
 	&.active {
 		visibility: visible;
 		opacity: 1;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		.popap__content {
+			display: block;
+		} 
 	}
 	&__content {
+		display: none;
 		max-width: 704px;
 		height: auto;
 		max-height: 100%;
