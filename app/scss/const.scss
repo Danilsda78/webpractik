@@ -1,13 +1,5 @@
 $red:#E52D2D;
 
-@mixin svg($name) {
-	width: 100%;
-	height: auto;
-	background-image: url('assets/#{$name}.svg');
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: left;
-}
 
 * {
 	box-sizing: border-box;
@@ -44,40 +36,10 @@ img {
 	height: auto;
 }
 
-.i-logo {
-	@include svg(logo)
+.app {
+	height: 100%;
+	// overflow-y: hidden;
 }
-.i-phone {
-	@include svg(phone)
-}
-.i-pizza {
-	@include svg(pizza-box)
-}
-.i-all {
-	@include svg(all)
-}
-.i-sharp {
-	@include svg(sharp)
-}
-.i-meat {
-	@include svg(meat)
-}
-.i-cheese {
-	@include svg(cheese)
-}
-.i-vegan {
-	@include svg(vegan)
-}
-.i-order {
-	@include svg(order)
-}
-.i-car {
-	@include svg(car)
-}
-.i-pay {
-	@include svg(pay)
-}
-
 .hidden {
 	overflow: hidden;
 }
@@ -113,10 +75,46 @@ footer {
 	}
 	&:focus {
 		background: #E52D2D;
-		border: 3px solid #8FC9FF;	
+		// border: 3px solid #8FC9FF;	
 	}
 	&:disabled {
 		background: #DBDBDB;
 		color: #939393;
 	}
+}
+.btn_ex {
+	width: 20px;
+	height: 20px;
+}
+input {
+	background: #FFFFFF;
+	border: 1px solid #C4C7CA;
+	box-sizing: border-box;
+	border-radius: 4px;
+	outline: none;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 18px;	
+	padding: 13px 12px;
+	height: 44px;
+	width: 100%;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		display: none;
+	}
+	&:hover {
+		border: 1px solid #000000;
+	}
+	&:focus {
+		border: 2px solid #8FC9FF;
+	}
+	&:active {
+		border: 2px solid #8FC9FF;
+	}
+}
+input[type="radio"] {
+	width: 20px;
+	height: 20px;
 }

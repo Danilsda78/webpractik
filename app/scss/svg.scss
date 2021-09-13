@@ -1,0 +1,51 @@
+@mixin svg($name) {
+	width: 100%;
+	height: auto;
+	background-image: url('assets/#{$name}.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: left;
+}
+
+.i-logo {
+	@include svg(logo)
+}
+.i-phone {
+	@include svg(phone)
+}
+.i-pizza {
+	@include svg(pizza-box)
+}
+.i-all {
+	@include svg(all)
+}
+.i-sharp {
+	@include svg(sharp)
+}
+.i-meat {
+	@include svg(meat)
+}
+.i-cheese {
+	@include svg(cheese)
+}
+.i-vegan {
+	@include svg(vegan)
+}
+.i-order {
+	@include svg(order)
+}
+.i-car {
+	@include svg(car)
+}
+.i-pay {
+	@include svg(pay)
+}
+.i-plus {
+	@include svg(plus)
+}
+.i-minus {
+	@include svg(minus)
+}
+.i-ex {
+	@include svg(ex)
+}

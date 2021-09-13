@@ -1,16 +1,22 @@
 let mobMenu = document.querySelector('.mobile-menu')
 let mobBtn = document.querySelector('.header__btn')
 let header = document.querySelector('.header')
+let app = document.querySelector('.app')
 let lastPositionScroll = 0
+let cards = document.querySelectorAll('.pick__cards')
+let popap = document.querySelector('#popap')
+let popapOn = document.querySelector('.header__item.drop')
+let popapOff = document.querySelector('#popap .popap__btn')
 
 
 function headBtnActive() {
 	mobMenu.classList.toggle('active')
 	mobBtn.classList.toggle('active')
-	document.body.classList.toggle('hidden')
+	app.classList.toggle('hidden')
 }
 
 function bodyPositionScroll() {
+	if (popap.value) return
 	let i = window.scrollY
 	if (window.scrollY == 0) {
 		header.classList.remove('scroll')
@@ -25,12 +31,6 @@ function bodyPositionScroll() {
 	lastPositionScroll = i
 }
 
-mobBtn.addEventListener('click', headBtnActive)
-window.addEventListener('scroll', bodyPositionScroll)
-
-
-let cards = document.querySelectorAll('.pick__cards')
-
 cards.forEach(card => {
 	let inputs = card.querySelectorAll('input')
 	let labels = card.querySelectorAll('label')
@@ -43,17 +43,17 @@ cards.forEach(card => {
 	});
 });
 
-let popap = document.querySelector('#popap')
-let popapOn = document.querySelector('.header__item.drop')
-let popapOff = document.querySelector('#popap .popap__btn')
-
+mobBtn.addEventListener('click', headBtnActive)
+window.addEventListener('scroll', bodyPositionScroll)
 popapOn.addEventListener('click', el => {
+	popap.value = true
 	popap.classList.toggle('active')
-	document.body.classList.toggle('hidden')
+	app.classList.toggle('hidden')
 })
 popapOff.addEventListener('click', el => {
+	popap.value = false
 	popap.classList.toggle('active')
-	document.body.classList.toggle('hidden')
+	app.classList.toggle('hidden')
 })
 
 

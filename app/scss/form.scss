@@ -4,12 +4,13 @@
 	left: 0;
 	z-index: 30;
 	width: 100%;
-	height: 100%;
+	min-height: 100vh;
+	height: auto;
 	position: absolute;
 	background: rgba($color: #000000, $alpha: .8);
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity .4s ;
+	transition: opacity .4s;
 	&.active {
 		visibility: visible;
 		opacity: 1;
@@ -20,6 +21,7 @@
 	&__content {
 		max-width: 704px;
 		height: auto;
+		max-height: 100%;
 		background: #fff;
 		padding: 32px 32px 40px;
 		width: 100%;
@@ -28,23 +30,226 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		border-bottom: 1px solid #DCDFE2;
+		padding: 0 0 24px;
 	}
 	&__text {}
-	&__btn {
-		width: 20px;
-		height: 20px;
+}
+.form {
+	&__body {}
+	&__cards {}
+	.card {
+		display: flex;
 		position: relative;
-		span {
-			position: absolute;
-			display: block;
-			width: 100%;
-			height: 2px;
-			border-radius: 1.5px;
-			background: #000;
-			transform: rotate(45deg);
-			&:last-child {
-				transform: rotate(-45deg);
+		padding: 8px 0;
+		min-height: 100px;
+		justify-content: space-between;
+		border-bottom: 1px solid #DCDFE2;
+		&__item {
+			display: flex;
+			align-items: center;
+			&._title {
+				margin: 0 32px 0 0;
 			}
+			&._value {
+				margin-right: auto;
+			}
+			&._pris {
+				margin: 0 32px 0 0;
+			}
+		}
+		&__symbol {
+			position: absolute;
+			top: 8px;
+			left: 0;
+		}
+		&__icon {
+			width: 12px;
+			height: 12px;
+			margin: 0 0 4px;
+		}
+		&__btn {
+			width: 12px;
+			height: 12px;
+			&.i-minus {}
+			&.i-plus {}
+		}
+		&__value {
+			width: 60px;
+			height: 40px;
+			text-align: center;
+			font-size: 16px;
+			line-height: 18px;			
+		}	
+		&__img {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			margin: 0 4px 0 12px;
+			img {
+				transform: translate(2%, 2%) scale(1);
+			}
+			span {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				border: 0.916667px dashed #DCDFE2;
+				border-radius: 50%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				&:nth-child(2) {
+					width: 90%;
+					height: 90%;
+				}
+				&:nth-child(3) {
+					width: 80%;
+					height: 80%;
+				}
+			}			
+		}
+		&__title {
+			font-weight: 800;
+			font-size: 18px;
+			line-height: 24px;
+			margin: 0 0 4px;
+			span {
+				font-family: Roboto;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 12px;
+				line-height: 18px;
+			}	
+		}
+		&__btn {
+			width: 24px;
+			height: 24px;
+			position: relative;
+			background: #C5CBD5;
+			border-radius: 50%;
+			margin: 8px;
+			transition: .3s;
+			span {
+				position: absolute;
+				display: block;
+				width: 12px;
+				height: 12px;
+				top: 50%;left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&:active {
+				background: $red;
+			}
+			&:disabled {
+				opacity: .5;
+				background: #C5CBD5;
+			}
+		}
+		&__btn_ex {
+			width: 9px;
+			height: 9px;
+			position: absolute;
+			top: 15px;
+			right: 7px;
+			opacity: .5;
+			transition: .3s;
+			&:active {
+				opacity: 1;
+			}
+		}
+	}
+	&__title {
+		font-size: 18px;
+		line-height: 24px;
+		margin: 0 0 12px;
+	}
+	&__footer {
+		display: flex;
+		justify-content: flex-end;
+		margin: 0 0 20px;
+		.text {
+			font-size: 18px;
+			line-height: 24px;
+		}
+		.int {
+			margin: 0 0 0 20px;
+			font-size: 32px;
+			line-height: 44px;	
+		}
+	}
+	&__contacts {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px 32px;
+		margin: 0 0 32px;
+	}
+	&__contacts-item {
+		flex: 1 1 auto;
+		&.name {}
+		&.number {}
+		&.adres {
+			width: 100%;
+		}
+	}
+	&__piy {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 18px;
+		margin: 0 0 32px;
+		label {
+			display: flex;
+			align-items: center;
+			margin: 0 0 16px;
+		}
+		input {
+			margin: 0 8px 0 0;
+			flex: 0 0 auto;
+		}
+	}
+	&__btn {
+		max-width: 240px;
+		padding: 14px 20px;
+		font-weight: 900;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: 1px;
+		text-transform: uppercase;	
+		margin: 0 0 23px;
+	}
+	&__ofeta {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 18px;
+		color: #848A9A;		
+	}	
+	@media (max-width: 580px) {
+		.card {
+			flex-direction: column;
+			align-items: center;
+			&__item {
+				margin: 0;
+				&._title,
+				&._value,
+				&._pris {
+					margin: 0 0 8px;
+				}
+				&._pris {
+					margin: 0;
+				}			
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.popap {
+		&__content {
 		}
 	}
 }
