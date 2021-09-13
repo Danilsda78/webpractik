@@ -18,15 +18,14 @@ function headBtnActive() {
 }
 
 function bodyPositionScroll() {
-	if (!scroll) return
 	let i = window.scrollY
-	if (window.scrollY == 0) {
+	if (window.scrollY == 0 && scroll) {
 		header.classList.remove('scroll')
 		header.classList.remove('defolt')
-	} else if (lastPositionScroll < i) {
+	} else if (lastPositionScroll < i && scroll) {
 		header.classList.remove('scroll')
 		header.classList.add('defolt')
-	} else if (lastPositionScroll > i && window.scrollY !== 0) {
+	} else if (lastPositionScroll > i && window.scrollY !== 0 && scroll) {
 		header.classList.remove('defolt')
 		header.classList.add('scroll')
 	}
@@ -49,6 +48,7 @@ mobBtn.addEventListener('click', headBtnActive)
 window.addEventListener('scroll', bodyPositionScroll)
 popapOn.addEventListener('click', el => {
 	scroll = false
+	console.log(scroll);
 	popap.classList.toggle('active')
 	app.classList.toggle('hidden')
 })
